@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+リポジトリから持ってくる
+```
+$ git clone git@github.com/burn2003jp/db_study.git
+$ cd db_study
+```
 
-Things you may want to cover:
+docker-compose pullしてup
+```
+$ docker-compose pull
+$ docker-compose up 
+```
 
-* Ruby version
+DB作る
+```
+$ docker-compose exec web bundle exec rake db:create
+$ docker-compose exec web bundle exec rake db:migrate
+$ docker-compose exec web bundle exec rake db:seed
 
-* System dependencies
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
